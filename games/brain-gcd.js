@@ -20,7 +20,7 @@ const arrGenerate = () => {
       }
       return answer;
     };
-    taskArray.push(cons((`${first}${second}`), String(getGsd(first, second))));
+    taskArray.push(cons((`${first}  ${second}`), String(getGsd(first, second))));
   }
   return taskArray;
 };
