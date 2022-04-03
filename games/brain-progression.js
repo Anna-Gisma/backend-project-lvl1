@@ -23,7 +23,8 @@ const arrGenerate = () => {
     }
     const answer = progression[requiredSymbolPosition];
     progression[requiredSymbolPosition] = '..';
-    taskArray.push(cons(progression, String(answer)));
+    const newProgression = progression.join(' ');
+    taskArray.push(cons(newProgression, String(answer)));
   }
   return taskArray;
 };
