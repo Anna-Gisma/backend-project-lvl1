@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import { greeting, sayRules, resultComplain } from '../../src/index.js';
+import { greeting, sayRules, resultComplain } from '../src/index.js';
 
 greeting();
 const rule = 'What number is missing in the progression?';

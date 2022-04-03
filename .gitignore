@@ -1,1 +1,4 @@
 node_modules
+src/cli-even.js
+src/cli.js
+bin

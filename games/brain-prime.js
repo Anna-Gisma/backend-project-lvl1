@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import { greeting, sayRules, resultComplain } from '../../src/index.js';
+import { greeting, sayRules, resultComplain } from '../src/index.js';
 
 greeting();
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
