@@ -10,9 +10,9 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const firstNumber = getRandom(0, 100);
-    const secondNumber = getRandom(0, 100);
-    const operatorNumber = getRandom(0, 3);
+    const firstNumber = getRandom(100);
+    const secondNumber = getRandom(100);
+    const operatorNumber = getRandom(3);
     let operator = '';
     let answer = 0;
     switch (operatorNumber) {

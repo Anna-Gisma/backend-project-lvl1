@@ -10,8 +10,8 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const first = getRandom(0, 100);
-    const second = getRandom(0, 100);
+    const first = getRandom(100);
+    const second = getRandom(100);
     const question = `${first} ${second}`;
     const getGsd = (firstNum, secondNum) => {
       let answer = 0;

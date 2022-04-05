@@ -10,10 +10,10 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const progressionLength = getRandom(6, 10);
-    const progressionStep = getRandom(1, 7);
-    const firstProgressionNumber = getRandom(0, 100);
-    const requiredSymbolPosition = getRandom(2, progressionLength - 1);
+    const progressionLength = getRandom(10, 6);
+    const progressionStep = getRandom(7, 1);
+    const firstProgressionNumber = getRandom(100);
+    const requiredSymbolPosition = getRandom(progressionLength - 1, 2);
     const progression = [];
 
     let count = progressionLength;

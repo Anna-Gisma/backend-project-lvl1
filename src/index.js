@@ -16,7 +16,7 @@ export const greeting = () => {
 
 // правила игры
 export const sayRules = (rule) => console.log(rule);
-export const getRandom = (min, max) => Math.floor(Math.random() * (max - min) + min);
+export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min) + min);
 
 export const resultComplain = (x) => {
   let i = 0;
