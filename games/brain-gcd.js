@@ -10,6 +10,7 @@ const arrGenerate = () => {
   for (let i = 0; i < 3; i += 1) {
     const first = Math.floor(Math.random() * (100));
     const second = Math.floor(Math.random() * (100));
+    const question = `${first} ${second}`;
     const getGsd = (firstNum, secondNum) => {
       let answer = 0;
       let a = firstNum;
@@ -20,7 +21,7 @@ const arrGenerate = () => {
       }
       return answer;
     };
-    taskArray.push(cons((`${first}  ${second}`), String(getGsd(first, second))));
+    taskArray.push(cons((question), String(getGsd(first, second))));
   }
   return taskArray;
 };
