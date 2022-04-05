@@ -8,7 +8,7 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const number = String(Math.floor(Math.random() * (100)));
+    const number = String(Math.floor(Math.random() * (99) + 1));
     const isPrime = (num) => {
       for (let j = 2; j < Math.sqrt(num); j += 1) {
         if (num % j === 0) {
