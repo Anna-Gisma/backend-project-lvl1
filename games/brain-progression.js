@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import { greeting, sayRules, resultComplain } from '../src/index.js';
+import {
+  greeting, sayRules, resultComplain, getRandom,
+} from '../src/index.js';
 
 greeting();
 const rule = 'What number is missing in the progression?';
@@ -8,10 +10,10 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const progressionLength = 6;
-    const progressionStep = Math.floor(Math.random() * (6) + 1);
-    const firstProgressionNumber = Math.floor(Math.random() * (100));
-    const requiredSymbolPosition = Math.floor(Math.random() * (progressionLength - 3) + 1);
+    const progressionLength = getRandom(6, 10);
+    const progressionStep = getRandom(1, 7);
+    const firstProgressionNumber = getRandom(0, 100);
+    const requiredSymbolPosition = getRandom(2, progressionLength - 1);
     const progression = [];
 
     let count = progressionLength;

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import { greeting, sayRules, resultComplain } from '../src/index.js';
+import {
+  greeting, sayRules, resultComplain, getRandom,
+} from '../src/index.js';
 
 greeting();
 const rule = 'Find the greatest common divisor of given numbers.';
@@ -8,8 +10,8 @@ sayRules(rule);
 const arrGenerate = () => {
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const first = Math.floor(Math.random() * (100));
-    const second = Math.floor(Math.random() * (100));
+    const first = getRandom(0, 100);
+    const second = getRandom(0, 100);
     const question = `${first} ${second}`;
     const getGsd = (firstNum, secondNum) => {
       let answer = 0;
