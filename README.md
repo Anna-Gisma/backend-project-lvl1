@@ -3,7 +3,18 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/36680b340b0d44901360/maintainability)](https://codeclimate.com/github/Anna-Gisma/backend-project-lvl1/maintainability)
 ![example workflow](https://github.com/Anna-Gisma/backend-project-lvl1/actions/workflows/.github/workflows/nodejs.yaml/badge.svg)
 
-** Набор простых консольных игр на основе базовых арифметических операций **
+# js-pairs
+
+**Simple console games with arithmetic**  
+
+## Install
+
+```sh
+npm install @anna-gisma/brain-games
+```
+
+## Usage example
+
 
 Calculator    
 [![asciicast](https://asciinema.org/a/Ks3MJ3KaeGtR29xYDoyUgZmNe.svg)](https://asciinema.org/a/Ks3MJ3KaeGtR29xYDoyUgZmNe)  
