@@ -5,8 +5,17 @@
 
 ** Набор простых консольных игр на основе базовых арифметических операций **
 
-[Calculator](https://asciinema.org/a/Ks3MJ3KaeGtR29xYDoyUgZmNe)  
-[Parity](https://asciinema.org/a/dN33O9KVkkwgGWuWqU4O4rBzT)  
-[Greatest common divisor](https://asciinema.org/a/wqFjWoGJQV5Nqlf48EWo9HyWn)  
-[Is it prime](https://asciinema.org/a/xLOFk4Zt5MGRBvAVqpCBz7zEd)  
-[Progression](https://asciinema.org/a/4aAuWDR9Ms8kRsItiAJ2wEeQ7)  
+Calculator    
+[![asciicast](https://asciinema.org/a/Ks3MJ3KaeGtR29xYDoyUgZmNe.svg)](https://asciinema.org/a/Ks3MJ3KaeGtR29xYDoyUgZmNe)  
+
+Parity  
+[![asciicast](https://asciinema.org/a/dN33O9KVkkwgGWuWqU4O4rBzT.svg)](https://asciinema.org/a/dN33O9KVkkwgGWuWqU4O4rBzT)  
+
+Greatest common divisor  
+[![asciicast](https://asciinema.org/a/wqFjWoGJQV5Nqlf48EWo9HyWn.svg)](https://asciinema.org/a/wqFjWoGJQV5Nqlf48EWo9HyWn)  
+
+Is it prime  
+[![asciicast](https://asciinema.org/a/xLOFk4Zt5MGRBvAVqpCBz7zEd.svg)](https://asciinema.org/a/xLOFk4Zt5MGRBvAVqpCBz7zEd)  
+
+Progression  
+[![asciicast](https://asciinema.org/a/4aAuWDR9Ms8kRsItiAJ2wEeQ7.svg)](https://asciinema.org/a/4aAuWDR9Ms8kRsItiAJ2wEeQ7)  
