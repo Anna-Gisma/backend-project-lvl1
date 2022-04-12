@@ -1,18 +1,16 @@
-#!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import {
-  greeting, sayRules, resultComplain, getRandom,
-} from '../src/index.js';
+import { greeting } from '../index.js';
+import getRandom from '../get-random.js';
 
-greeting();
-const rule = 'What number is missing in the progression?';
-sayRules(rule);
 const arrGenerate = () => {
+  greeting();
+  const rule = 'What number is missing in the progression?';
+  console.log(rule);
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
     const progressionLength = getRandom(10, 6);
     const progressionStep = getRandom(7, 1);
-    const firstProgressionNumber = getRandom(100);
+    const firstProgressionNumber = getRandom(0, 100);
     const requiredSymbolPosition = getRandom(progressionLength - 1, 2);
     const progression = [];
 
@@ -31,4 +29,4 @@ const arrGenerate = () => {
   return taskArray;
 };
 
-resultComplain(arrGenerate());
+export default arrGenerate;

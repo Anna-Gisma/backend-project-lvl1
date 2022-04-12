@@ -1,18 +1,16 @@
-#!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import {
-  greeting, sayRules, resultComplain, getRandom,
-} from '../src/index.js';
+import { greeting } from '../index.js';
+import getRandom from '../get-random.js';
 
-greeting();
-const rule = 'What is the result of the expression?';
-sayRules(rule);
 const arrGenerate = () => {
+  greeting();
+  const rule = 'What is the result of the expression?';
+  console.log(rule);
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const firstNumber = getRandom(100);
-    const secondNumber = getRandom(100);
-    const operatorNumber = getRandom(3);
+    const firstNumber = getRandom(1, 100);
+    const secondNumber = getRandom(1, 100);
+    const operatorNumber = getRandom(1, 3);
     let operator = '';
     let answer = 0;
     switch (operatorNumber) {
@@ -34,4 +32,5 @@ const arrGenerate = () => {
   }
   return taskArray;
 };
-resultComplain(arrGenerate());
+
+export default arrGenerate;

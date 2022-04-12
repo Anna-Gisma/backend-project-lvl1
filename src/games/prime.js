@@ -1,16 +1,14 @@
-#!/usr/bin/env node
 import { cons } from '@hexlet/pairs';
-import {
-  greeting, sayRules, resultComplain, getRandom,
-} from '../src/index.js';
+import { greeting } from '../index.js';
+import getRandom from '../get-random.js';
 
-greeting();
-const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-sayRules(rule);
 const arrGenerate = () => {
+  greeting();
+  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  console.log(rule);
   const taskArray = [];
   for (let i = 0; i < 3; i += 1) {
-    const number = String(getRandom(100, 1));
+    const number = String(getRandom(1, 100));
     const isPrime = (num) => {
       for (let j = 2; j <= Math.sqrt(num); j += 1) {
         if (num % j === 0) {
@@ -24,4 +22,4 @@ const arrGenerate = () => {
   }
   return taskArray;
 };
-resultComplain(arrGenerate());
+export default arrGenerate;

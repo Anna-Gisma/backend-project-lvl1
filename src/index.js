@@ -14,17 +14,11 @@ export const greeting = () => {
   return name;
 };
 
-// правила игры
-export const sayRules = (rule) => console.log(rule);
-export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min) + min);
-
-export const resultComplain = (x) => {
-  let i = 0;
-  while (i < rounds) {
-    console.log(`Question: ${car(x[i])}`);
+export const startResultComplain = (roundsData) => {
+  for (let i = 0; i < rounds; i += 1) {
+    console.log(`Question: ${car(roundsData[i])}`);
     const answer = readlineSync.question('Your answer: ');
-    const rightAnswer = cdr(x[i]);
-    i += 1;
+    const rightAnswer = cdr(roundsData[i]);
     if (answer === rightAnswer) {
       console.log('Correct!');
     } else {
