@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import arrGenerate from '../src/games/progression.js';
-import { startResultComplain } from '../src/index.js';
+import generateRoundData from '../src/games/progression.js';
+import startResultComplain from '../src/index.js';
 
-startResultComplain(arrGenerate());
+startResultComplain(generateRoundData());

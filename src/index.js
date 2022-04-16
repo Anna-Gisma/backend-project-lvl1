@@ -3,18 +3,12 @@ import {
   car, cdr,
 } from '@hexlet/pairs';
 
-const rounds = 3; // rounds count
-
-//  приветствие
-let name = ' ';
-export const greeting = () => {
+const startResultComplain = ([roundsData, rule]) => {
   console.log('Welcome to the Brain Games!');
-  name = readlineSync.question('May I have your name?: ');
+  const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
-  return name;
-};
-
-export const startResultComplain = (roundsData) => {
+  console.log(rule);
+  const rounds = 3;
   for (let i = 0; i < rounds; i += 1) {
     console.log(`Question: ${car(roundsData[i])}`);
     const answer = readlineSync.question('Your answer: ');
@@ -27,3 +21,4 @@ export const startResultComplain = (roundsData) => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
+export default startResultComplain;
