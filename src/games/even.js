@@ -1,5 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { getRandom, isEven } from '../functions.js';
+import getRandom from '../getRandomfunction.js';
+import runEngine from '../index.js';
+
+export const isEven = (number) => (number % 2 === 0);
 
 export const getRoundData = () => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -11,4 +14,4 @@ export const getRoundData = () => {
   }
   return [roundData, rule];
 };
-export default getRoundData;
+export default () => runEngine(getRoundData());

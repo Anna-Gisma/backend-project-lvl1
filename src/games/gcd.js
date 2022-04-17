@@ -1,7 +1,16 @@
 import { cons } from '@hexlet/pairs';
-import { getRandom, getGcd } from '../functions.js';
+import getRandom from '../getRandomfunction.js';
+import runEngine from '../index.js';
 
-const generateRoundData = () => {
+export const getGcd = (firstNumber, secondNumber) => {
+  const result = firstNumber % secondNumber;
+  if (result === 0) {
+    return secondNumber;
+  }
+  return getGcd(secondNumber, result);
+};
+
+const getRoundData = () => {
   const rule = 'Find the greatest common divisor of given numbers.';
   const roundData = [];
   for (let i = 0; i < 3; i += 1) {
@@ -12,4 +21,5 @@ const generateRoundData = () => {
   }
   return [roundData, rule];
 };
-export default generateRoundData;
+
+export default () => runEngine(getRoundData());
