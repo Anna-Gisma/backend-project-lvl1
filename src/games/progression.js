@@ -1,6 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import getRandom from '../getRandomfunction.js';
-import runEngine from '../index.js';
+import { runEngine, roundsCount } from '../index.js';
+
+const rule = 'What number is missing in the progression?';
 
 export const getProgression = (
   progressionLength,
@@ -9,7 +11,7 @@ export const getProgression = (
   requiredSymbolPosition,
 ) => {
   const progression = [];
-  for (let count = 1; count < progressionLength; count += 1) {
+  for (let count = 0; count < progressionLength; count += 1) {
     const nextNumber = firstProgressionNumber + (progressionStep * count);
     progression.push(nextNumber);
   }
@@ -19,14 +21,13 @@ export const getProgression = (
 };
 
 const getRoundData = () => {
-  const rule = 'What number is missing in the progression?';
   const roundData = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const progressionLength = getRandom(6, 10);
     const progressionStep = getRandom(1, 7);
     const firstProgressionNumber = getRandom(0, 100);
-    const requiredSymbolPosition = getRandom(2, progressionLength - 2);
-    const answer = firstProgressionNumber + (requiredSymbolPosition + 1) * progressionStep;
+    const requiredSymbolPosition = getRandom(0, progressionLength - 1);
+    const answer = firstProgressionNumber + requiredSymbolPosition * progressionStep;
     const newProgression = getProgression(
       progressionLength,
       firstProgressionNumber,
@@ -35,7 +36,7 @@ const getRoundData = () => {
     );
     roundData.push(cons(newProgression, String(answer)));
   }
-  return [roundData, rule];
+  return roundData;
 };
 
-export default () => runEngine(getRoundData());
+export default () => runEngine(getRoundData(), rule);

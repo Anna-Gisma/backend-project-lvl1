@@ -1,43 +1,37 @@
 import { cons } from '@hexlet/pairs';
 import getRandom from '../getRandomfunction.js';
-import runEngine from '../index.js';
+import { runEngine, roundsCount } from '../index.js';
 
-const getOperator = () => {
-  const symbols = ['+', '-', '*'];
-  const operatorNumber = getRandom(0, 2);
-  return symbols[operatorNumber];
-};
+const rule = 'What is the result of the expression?';
+const symbols = ['+', '-', '*'];
 
-const getArithmeticResult = (theOperator, firstNumber, secondNumber) => {
-  let answer = 0;
-  const operator = theOperator;
+const getArithmeticResult = (operator, firstNumber, secondNumber) => {
   switch (operator) {
     case '+':
-      answer = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      answer = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     default:
-      answer = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
   }
+};
 
-  return answer;
+const getOneRound = () => {
+  const firstNumber = getRandom(1, 100);
+  const secondNumber = getRandom(1, 100);
+  const operator = symbols[getRandom(0, 2)];
+  const answer = getArithmeticResult(operator, firstNumber, secondNumber);
+  const number = `${firstNumber} ${operator} ${secondNumber}`;
+  const result = cons(number, String(answer));
+  return result;
 };
 
 const getRoundData = () => {
-  const rule = 'What is the result of the expression?';
   const roundData = [];
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = getRandom(1, 100);
-    const secondNumber = getRandom(1, 100);
-    const operator = getOperator();
-    const answer = getArithmeticResult(operator, firstNumber, secondNumber);
-    const number = `${firstNumber} ${operator} ${secondNumber}`;
-    roundData.push(cons(number, String(answer)));
+  for (let i = 0; i < roundsCount; i += 1) {
+    roundData.push(getOneRound());
   }
-  return [roundData, rule];
+  return roundData;
 };
 
-export default () => runEngine(getRoundData());
+export default () => runEngine(getRoundData(), rule);

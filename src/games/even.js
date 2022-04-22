@@ -1,17 +1,17 @@
 import { cons } from '@hexlet/pairs';
 import getRandom from '../getRandomfunction.js';
-import runEngine from '../index.js';
+import { runEngine, roundsCount } from '../index.js';
 
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 export const isEven = (number) => (number % 2 === 0);
 
 export const getRoundData = () => {
-  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
   const roundData = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const number = String(getRandom(0, 500));
     const answer = isEven(number) ? 'yes' : 'no';
     roundData.push(cons(number, answer));
   }
-  return [roundData, rule];
+  return roundData;
 };
-export default () => runEngine(getRoundData());
+export default () => runEngine(getRoundData(), rule);
