@@ -9,6 +9,7 @@ const runEngine = (roundsData, rule) => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   console.log(rule);
+  // eslint-disable-next-line no-restricted-syntax
   for (const data of roundsData) {
     console.log(`Question: ${car(data)}`);
     const answer = readlineSync.question('Your answer: ');
