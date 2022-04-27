@@ -9,16 +9,16 @@ const runEngine = (roundsData, rule) => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   console.log(rule);
-  for (let i = 0; i < roundsCount; i += 1) {
-    console.log(`Question: ${car(roundsData[i])}`);
+  for (const data of roundsData) {
+    console.log(`Question: ${car(data)}`);
     const answer = readlineSync.question('Your answer: ');
-    const rightAnswer = cdr(roundsData[i]);
-    if (answer === rightAnswer) {
-      console.log('Correct!');
-    } else {
-      return console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}. Let's try again, ${name}!`);
+    const rightAnswer = cdr(data);
+    if (answer !== rightAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}. Let's try again, ${name}!`);
+      return;
     }
+    console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 export { runEngine, roundsCount };

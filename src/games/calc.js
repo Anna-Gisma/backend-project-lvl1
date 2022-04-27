@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import getRandom from '../getRandomfunction.js';
+import { getRandom } from '../getSomeFunctions.js';
 import { runEngine, roundsCount } from '../index.js';
 
 const rule = 'What is the result of the expression?';
@@ -11,8 +11,10 @@ const getArithmeticResult = (operator, firstNumber, secondNumber) => {
       return firstNumber + secondNumber;
     case '-':
       return firstNumber - secondNumber;
-    default:
+    case '*':
       return firstNumber * secondNumber;
+    default:
+      throw new Error(`operation ${operator} is not supported`);
   }
 };
 

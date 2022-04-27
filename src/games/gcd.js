@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import getRandom from '../getRandomfunction.js';
+import { getRandom } from '../getSomeFunctions.js';
 import { runEngine, roundsCount } from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';

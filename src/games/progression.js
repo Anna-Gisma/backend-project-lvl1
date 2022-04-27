@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import getRandom from '../getRandomfunction.js';
+import { getRandom } from '../getSomeFunctions.js';
 import { runEngine, roundsCount } from '../index.js';
 
 const rule = 'What number is missing in the progression?';
@@ -20,21 +20,26 @@ export const getProgression = (
   return newProgression;
 };
 
+const getOneRound = () => {
+  const progressionLength = getRandom(6, 10);
+  const progressionStep = getRandom(1, 7);
+  const firstProgressionNumber = getRandom(0, 100);
+  const requiredSymbolPosition = getRandom(0, progressionLength - 1);
+  const answer = firstProgressionNumber + requiredSymbolPosition * progressionStep;
+  const newProgression = getProgression(
+    progressionLength,
+    firstProgressionNumber,
+    progressionStep,
+    requiredSymbolPosition,
+  );
+  const result = cons(newProgression, String(answer));
+  return result;
+};
+
 const getRoundData = () => {
   const roundData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    const progressionLength = getRandom(6, 10);
-    const progressionStep = getRandom(1, 7);
-    const firstProgressionNumber = getRandom(0, 100);
-    const requiredSymbolPosition = getRandom(0, progressionLength - 1);
-    const answer = firstProgressionNumber + requiredSymbolPosition * progressionStep;
-    const newProgression = getProgression(
-      progressionLength,
-      firstProgressionNumber,
-      progressionStep,
-      requiredSymbolPosition,
-    );
-    roundData.push(cons(newProgression, String(answer)));
+    roundData.push(getOneRound());
   }
   return roundData;
 };
