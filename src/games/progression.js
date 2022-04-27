@@ -20,7 +20,7 @@ export const getProgression = (
   return newProgression;
 };
 
-const getOneRound = () => {
+const getOneProgressionRound = () => {
   const progressionLength = getRandom(6, 10);
   const progressionStep = getRandom(1, 7);
   const firstProgressionNumber = getRandom(0, 100);
@@ -39,7 +39,7 @@ const getOneRound = () => {
 const getRoundData = () => {
   const roundData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    roundData.push(getOneRound());
+    roundData.push(getOneProgressionRound());
   }
   return roundData;
 };

@@ -18,7 +18,7 @@ const getArithmeticResult = (operator, firstNumber, secondNumber) => {
   }
 };
 
-const getOneRound = () => {
+const getOneCalcRound = () => {
   const firstNumber = getRandom(1, 100);
   const secondNumber = getRandom(1, 100);
   const operator = symbols[getRandom(0, 2)];
@@ -31,7 +31,7 @@ const getOneRound = () => {
 const getRoundData = () => {
   const roundData = [];
   for (let i = 0; i < roundsCount; i += 1) {
-    roundData.push(getOneRound());
+    roundData.push(getOneCalcRound());
   }
   return roundData;
 };
